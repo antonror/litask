@@ -1,0 +1,21 @@
+<%= form_for(@task) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="field">
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
+
+
+
+    <div class="field">
+      <%= f.text_area :content, placeholder: "Create new task ..." %>
+      </div>
+
+    <div class="field">
+      <%= f.label :priority %>
+      <%= f.text_field :priority %>
+    </div>
+
+    <%= f.submit "Add Task", class: "btn btn-primary" %>
+<% end %>
