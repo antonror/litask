@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170609170238) do
     t.string   "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_tasks_on_user_id_and_created_at"
   end
 
   create_table "users", force: :cascade do |t|
