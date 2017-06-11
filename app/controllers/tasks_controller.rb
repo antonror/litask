@@ -31,7 +31,7 @@ class TasksController < ApplicationController
       redirect_to root_url
     else
       @feed_items = []
-    render 'static_pages/about'
+    render 'static_pages/home'
     end
   end
 
