@@ -1,8 +1,13 @@
-<li id="task-<%= task.id %>">
+<li id="<%= task.id %>">
   <%= link_to gravatar_for(task.user, size: 50), task.user %>
   <span class="user"><%= link_to task.user.name, task.user %></span>
   <span class="content"><%= task.content %></span>
   <span class="timestamp">
     Added <%= time_ago_in_words(task.created_at) %> ago.
+
+    <% if current_user?(task.user) %>
+      <%= link_to "delete", task, method: :delete,
+                  data: { confirm: "Delete Task?" } %>
+    <% end %>
   </span>
 </li>
