@@ -1,6 +1,8 @@
 <% if logged_in? %>
 
-    <div class="row">
+    <%= render 'layouts/sidebar' %>
+
+    <div class="home_content">
           <aside class="col-md-4">
             <section class="user_info"><%= render 'shared/user_info' %></section>
             <section class="tasks_form"><%= render 'shared/tasks_form' %></section>
@@ -11,7 +13,7 @@
             <%= render 'shared/feed' %>
           </div>
     </div>
-    
+
 <% else %>
 
 <div class="center jumbotron">
