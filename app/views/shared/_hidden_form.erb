@@ -1,0 +1,24 @@
+<div class="hiddenform">
+  <a href="#" class="mylink">+ Add New Project</a>
+  <%= form_for(@task) do |f| %>
+      <div class="form">
+            <%= render 'shared/error_messages', object: f.object %>
+
+            <div class="field">
+              <%= f.label :category %>
+              <%= f.text_field :category %>
+            </div>
+
+            <div class="field">
+              <%= f.text_area :content, placeholder: "Create new task ..." %>
+            </div>
+
+            <div class="field">
+              <%= f.label :priority %>
+              <%= f.text_field :priority %>
+            </div>
+
+            <%= f.submit "Add Task", class: "btn btn-primary" %>
+        <% end %>
+  </div>
+</div>

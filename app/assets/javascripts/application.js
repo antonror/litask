@@ -1,5 +1,10 @@
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
-//= require bootstrap
-//= require turbolinks
-//= require_tree .
+
+$(function(){
+    $('.hiddenform .mylink').click(function(){
+        $(this).hide();
+        $('.hiddenform .form').show();
+        return false;
+    });
+});
